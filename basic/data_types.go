@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
 	var b bool = true
@@ -60,4 +63,19 @@ func main() {
 
 	//无符号整形 用于存放一个指针
 	//var uintptrPtr uintptr = & intNum
+
+	//类型转换
+	var x, y int = 3, 4
+	var f float64 = math.Sqrt(float64(x*x + y*y))
+	var z uint = uint(f)
+	fmt.Println(x, y, z)
+
+	//类型推导
+	var i int
+	j := i
+	i = 42
+	f = 3.142
+	g := 0.867 + 0.5i
+	fmt.Println(j, i, f, g)
+
 }
